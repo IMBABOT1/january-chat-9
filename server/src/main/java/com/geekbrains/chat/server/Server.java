@@ -1,5 +1,7 @@
 package com.geekbrains.chat.server;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -15,6 +17,9 @@ public class Server {
     private List<ClientHandler> clients;
     private final DateTimeFormatter DTF = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
+    private FileOutputStream out;
+
+
     public AuthManager getAuthManager() {
         return authManager;
     }
@@ -23,6 +28,11 @@ public class Server {
         clients = new ArrayList<>();
         authManager = new SqlAuthManager();
         authManager.start();
+        try {
+            out = new FileOutputStream("log.txt", true);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Сервер запущен. Ожидаем подключения клиентов...");
             while (true) {
@@ -43,6 +53,11 @@ public class Server {
         }
         for (ClientHandler o : clients) {
             o.sendMsg(msg);
+            try {
+                out.write((msg + "\n").getBytes());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

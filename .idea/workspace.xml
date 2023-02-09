@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd204585-6e9d-4a4e-9aad-9c32307c01c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/SqlAuthManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/geekbrains/chat/client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/geekbrains/chat/client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/geekbrains/chat/client/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/geekbrains/chat/client/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/AuthManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/AuthManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/BasicAuthManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/BasicAuthManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/geekbrains/chat/server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/geekbrains/chat/server/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/com/geekbrains/chat/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/com/geekbrains/chat/server/Server.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <workItem from="1579798834050" duration="7181000" />
       <workItem from="1675340908138" duration="5252000" />
       <workItem from="1675352409432" duration="1730000" />
-      <workItem from="1675948099716" duration="7845000" />
+      <workItem from="1675948099716" duration="13500000" />
     </task>
     <servers />
   </component>
@@ -143,5 +143,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/MainApp.java</url>
+          <line>7</line>
+          <properties class="com.geekbrains.chat.server.MainApp" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

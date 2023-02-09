@@ -8,8 +8,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import net.grinder.console.webui.ReverseLineInputStream;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -32,6 +35,9 @@ public class Controller implements Initializable {
     private Network network;
     private boolean authenticated;
     private String nickname;
+
+    private BufferedReader in;
+    private int counter;
 
     public void setAuthenticated(boolean authenticated) {
         this.authenticated = authenticated;
@@ -62,6 +68,8 @@ public class Controller implements Initializable {
             }
             setAuthenticated(false);
             network = new Network(8189);
+            in = new BufferedReader(new InputStreamReader(new ReverseLineInputStream("log.txt")));
+            counter = 0;
             Thread t = new Thread(() -> {
                 try {
                     while (true) {
@@ -70,6 +78,26 @@ public class Controller implements Initializable {
                             nickname = msg.split(" ")[1];
                             textArea.appendText("Вы зашли в чат под ником: " + nickname + "\n");
                             setAuthenticated(true);
+
+                            Platform.runLater(new Runnable() {
+                                @Override
+                                public void run() {
+                                    do {
+                                        try {
+                                            String line = in.readLine();
+                                            counter++;
+                                            System.out.println(counter);
+                                            if (line == null) {
+                                                break;
+                                            }
+                                            textArea.appendText(line + "\n");
+                                        }catch (IOException e){
+                                            e.printStackTrace();
+                                        }
+                                    }while (true);
+                                }
+                            });
+
                             break;
                         }
                         textArea.appendText(msg + "\n");

@@ -25,5 +25,10 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.40.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.cossme</groupId>
+            <artifactId>grinder-web-console</artifactId>
+            <version>4.0.0</version>
+        </dependency>
     </dependencies>
 </project>

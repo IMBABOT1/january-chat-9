@@ -1,8 +1,6 @@
 package com.geekbrains.chat.server;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 public class ClientHandler {
@@ -11,6 +9,9 @@ public class ClientHandler {
     private DataInputStream in;
     private DataOutputStream out;
     private String nickname;
+
+    private FileOutputStream fis;
+
 
     public String getNickname() {
         return nickname;
@@ -67,6 +68,8 @@ public class ClientHandler {
                         }
                     } else {
                         server.broadcastMsg(nickname + ": " + msg, true);
+                        fis = new FileOutputStream("history_" + nickname + ".txt", true);
+                        fis.write((msg + "\n").getBytes());
                     }
                 }
             } catch (IOException e) {
