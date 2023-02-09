@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd204585-6e9d-4a4e-9aad-9c32307c01c5" name="Default Changelist" comment="" />
+    <list default="true" id="cd204585-6e9d-4a4e-9aad-9c32307c01c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/geekbrains/chat/client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/geekbrains/chat/client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/target/classes/com/geekbrains/chat/client/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/client/target/classes/com/geekbrains/chat/client/Controller.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +121,7 @@
       <workItem from="1579798834050" duration="7181000" />
       <workItem from="1675340908138" duration="5252000" />
       <workItem from="1675352409432" duration="1730000" />
-      <workItem from="1675948099716" duration="13809000" />
+      <workItem from="1675948099716" duration="15816000" />
     </task>
     <servers />
   </component>

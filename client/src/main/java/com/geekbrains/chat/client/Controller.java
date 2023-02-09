@@ -14,6 +14,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -38,6 +40,7 @@ public class Controller implements Initializable {
 
     private BufferedReader in;
     private int counter;
+
 
     public void setAuthenticated(boolean authenticated) {
         this.authenticated = authenticated;
@@ -86,8 +89,7 @@ public class Controller implements Initializable {
                                         try {
                                             String line = in.readLine();
                                             counter++;
-                                            System.out.println(counter);
-                                            if (line == null) {
+                                            if (line == null || counter == 100) {
                                                 break;
                                             }
                                             textArea.appendText(line + "\n");
@@ -97,10 +99,11 @@ public class Controller implements Initializable {
                                     }while (true);
                                 }
                             });
-
                             break;
                         }
+                        System.out.println("fadsfads");
                         textArea.appendText(msg + "\n");
+
                     }
                     while (true) {
                         String msg = network.readMsg();
