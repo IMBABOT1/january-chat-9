@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd204585-6e9d-4a4e-9aad-9c32307c01c5" name="Default Changelist" comment="" />
+    <list default="true" id="cd204585-6e9d-4a4e-9aad-9c32307c01c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/SqlAuthManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/AuthManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/AuthManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/BasicAuthManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/BasicAuthManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/geekbrains/chat/server/Server.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +43,7 @@
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/january-chat",
+    "last_opened_file_path": "D:/ChatJava",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,6 +125,8 @@
       <workItem from="1579625986634" duration="995000" />
       <workItem from="1579798834050" duration="7181000" />
       <workItem from="1675340908138" duration="5252000" />
+      <workItem from="1675352409432" duration="1730000" />
+      <workItem from="1675948099716" duration="7845000" />
     </task>
     <servers />
   </component>

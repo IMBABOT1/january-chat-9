@@ -34,4 +34,19 @@ public class BasicAuthManager implements AuthManager {
         }
         return null;
     }
+
+    @Override
+    public void changeNick(String newNick, String oldNick) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void start() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void stop() {
+        throw new UnsupportedOperationException();
+    }
 }
