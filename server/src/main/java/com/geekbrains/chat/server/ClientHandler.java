@@ -2,6 +2,8 @@ package com.geekbrains.chat.server;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ClientHandler {
     private Server server;
@@ -11,6 +13,7 @@ public class ClientHandler {
     private String nickname;
 
     private FileOutputStream fis;
+    private ExecutorService executorService;
 
 
     public String getNickname() {
@@ -22,7 +25,9 @@ public class ClientHandler {
         this.socket = socket;
         this.in = new DataInputStream(socket.getInputStream());
         this.out = new DataOutputStream(socket.getOutputStream());
-        new Thread(() -> {
+        this.executorService = Executors.newFixedThreadPool(4);
+
+        executorService.execute(() -> {
             try {
                 while (true) { // цикл аутентификации
                     String msg = in.readUTF();
@@ -77,7 +82,7 @@ public class ClientHandler {
             } finally {
                 close();
             }
-        }).start();
+        });
     }
 
     public void sendMsg(String msg) {

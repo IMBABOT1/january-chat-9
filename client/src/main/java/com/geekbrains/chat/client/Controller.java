@@ -81,7 +81,6 @@ public class Controller implements Initializable {
                             nickname = msg.split(" ")[1];
                             textArea.appendText("Вы зашли в чат под ником: " + nickname + "\n");
                             setAuthenticated(true);
-
                             Platform.runLater(new Runnable() {
                                 @Override
                                 public void run() {
@@ -93,6 +92,7 @@ public class Controller implements Initializable {
                                                 break;
                                             }
                                             textArea.appendText(line + "\n");
+
                                         }catch (IOException e){
                                             e.printStackTrace();
                                         }
@@ -101,9 +101,7 @@ public class Controller implements Initializable {
                             });
                             break;
                         }
-                        System.out.println("fadsfads");
                         textArea.appendText(msg + "\n");
-
                     }
                     while (true) {
                         String msg = network.readMsg();
